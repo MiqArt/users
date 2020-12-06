@@ -22,6 +22,15 @@ $darkBlue:#111c27;
   box-sizing: border-box;
 }
 
+input, select {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
 .App {
   background-color:#18191a;
   min-height: 100vh;
