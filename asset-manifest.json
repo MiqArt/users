@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/users/static/css/main.eefda01c.chunk.css",
+    "main.css": "/users/static/css/main.b0bcc891.chunk.css",
     "main.js": "/users/static/js/main.4c0f0df4.chunk.js",
     "main.js.map": "/users/static/js/main.4c0f0df4.chunk.js.map",
     "runtime-main.js": "/users/static/js/runtime-main.453163b1.js",
@@ -10,7 +10,7 @@
     "static/js/2.7ba208c0.chunk.js.map": "/users/static/js/2.7ba208c0.chunk.js.map",
     "index.html": "/users/index.html",
     "static/css/2.146210a6.chunk.css.map": "/users/static/css/2.146210a6.chunk.css.map",
-    "static/css/main.eefda01c.chunk.css.map": "/users/static/css/main.eefda01c.chunk.css.map",
+    "static/css/main.b0bcc891.chunk.css.map": "/users/static/css/main.b0bcc891.chunk.css.map",
     "static/js/2.7ba208c0.chunk.js.LICENSE.txt": "/users/static/js/2.7ba208c0.chunk.js.LICENSE.txt",
     "static/media/search.scss": "/users/static/media/Raleway-Bold.2d5ba478.ttf",
     "static/media/edit.4ffe848a.svg": "/users/static/media/edit.4ffe848a.svg",
@@ -26,7 +26,7 @@
     "static/js/runtime-main.453163b1.js",
     "static/css/2.146210a6.chunk.css",
     "static/js/2.7ba208c0.chunk.js",
-    "static/css/main.eefda01c.chunk.css",
+    "static/css/main.b0bcc891.chunk.css",
     "static/js/main.4c0f0df4.chunk.js"
   ]
 }
