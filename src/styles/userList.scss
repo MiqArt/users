@@ -1,0 +1,98 @@
+@import "./main.scss";
+
+.users-list {
+  width: 100%;
+  & .responsiveTable {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 0px;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+    background-color:  #2c2c2c;
+    border: 1px solid black;
+    padding: 5px;
+    &__thead {
+      color: whitesmoke;
+		  font-family: "OpenSans", sans-serif;
+      background-color: $blue;
+      &__tr {
+        height: 40px;
+        &__th {
+          border: 1px solid black;
+          padding: 4px;
+        }
+      }
+    }
+    &__tbody {
+      color: whitesmoke;
+      &__tr:nth-child(odd) {
+        background-color: $darkBlue;
+      }
+      &__td {
+        text-align: center;
+        padding: 4px;
+        &__btn {
+          outline: none;
+          border: none;
+          background: transparent;
+          cursor: pointer;
+          width: 30px;
+          &:hover .remove-btn {
+            color: #a31313;
+          }
+          &:hover .edit-btn {
+            color: #835e0e;
+          }
+          & .edit-btn {
+            color: #c58800;
+          }
+          & .remove-btn {
+            width: 17px;
+            color: #db2828;
+          }
+        }
+        & .--edit {
+          padding: 4px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .responsiveTable table, .responsiveTable thead, .responsiveTable tbody, .responsiveTable th, .responsiveTable td, .responsiveTable tr {
+    display: block !important;
+  }
+  .responsiveTable tbody tr {
+    border: 1px solid #000;
+    padding: .25em;
+  }
+  .responsiveTable td.pivoted {
+    border: none !important;
+    position: relative;
+    padding-left: calc(50% + 10px) !important;
+    text-align: left !important;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+  .responsiveTable td .tdBefore {
+    position: absolute;
+    display: block;
+    left: 1rem;
+    width: calc(50% - 20px);
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    text-align: left !important;
+    font-weight: 600;
+  }
+  .responsiveTable thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    border-bottom: 2px solid #333;
+  }
+}
+
+@media (max-width: 768px) {
+
+}

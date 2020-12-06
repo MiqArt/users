@@ -1,0 +1,98 @@
+$blue: #009ADA;
+$darkBlue:#111c27;
+
+@font-face {
+	font-family: "Galada-Regular";
+	src: url('./fonts/Galada-Regular.ttf');
+}
+
+@font-face {
+	font-family: "Raleway";
+	src: url('./fonts/Raleway-Bold.ttf');
+}
+
+@font-face {
+	font-family: "OpenSans";
+	src: url('./fonts/OpenSans-Bold.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  background-color:#18191a;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1680px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.content {
+  display: flex;
+  padding-top: 110px;
+  padding-bottom: 20px;
+  align-items: flex-start;
+  &__list {
+    width: 100%;
+    margin-left: 20px;
+    box-shadow: 2px 2px 5px 1px black;
+  }
+}
+
+.header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  background-color: #242526;
+  border-bottom: 1px solid #56585a;
+  &__body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &.container {
+      padding-left: 30px;
+    }
+  }
+  &__logo {
+    user-select: none;
+    font-size: 30px;
+    font-weight: 700;
+		font-family: "Galada-Regular", sans-serif;
+		color: $blue;
+		text-shadow: 0 1px #000000, -1px 0 #000000, -1px 2px #000000, -2px 1px #000000, 
+								-2px 3px #000000, -3px 2px #000000, -3px 4px #000000, -4px 3px #000000, 
+								-4px 5px #000000, -5px 4px #000000, -5px 6px #000000, -6px 5px #000000, 
+								-6px 7px #000000, -7px 6px #000000, -7px 8px #000000, -8px 7px #000000, 2px 2px 0px rgba(0,154,218,0);
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    align-items: center;
+    flex-direction: column;
+    &__list {
+      margin: 0;
+    }
+  }
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .user-form {
+    width: 100%;
+    margin-bottom: 20px;
+    &__input {
+      width: 100%;
+    }
+  }
+}
