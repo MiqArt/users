@@ -10,14 +10,14 @@ const slice = createSlice({
       template: {}
     },
     search: {
-      searching: false,
+      searchValue: "",
       findedUsers: []
     },
     filter: ""
   },
   reducers: {
     getUsers(state, action) {
-      if (action.payload === "ALL_DATA" || !state.search.findedUsers.length) {
+      if (action.payload === "ALL_DATA" || !state.search.searchValue) {
         const res = Storage.getData("usersAdminTask");
         state.users = res;
       } else {
@@ -30,7 +30,18 @@ const slice = createSlice({
     },
     editUser(state, action) {
       Storage.editItem("usersAdminTask", action.payload.id, action.payload);
-      state.users.map(el => el.id === action.payload.id ? { ...el, ...action.payload, } : el);
+      let newUsers = state.users.map(el => el.id === action.payload.id ? { ...el, ...action.payload, } : el);
+      if(state.search.searchValue) {
+        newUsers = newUsers.filter(el => el.email.toLowerCase().includes(state.search.searchValue.toLowerCase()) || el.phone.includes(state.search.searchValue));
+      }
+      return {
+        ...state,
+        users: newUsers,
+        search: {
+          ...state.search,
+          findedUsers: newUsers
+        }
+      }
     },
     removeUser(state, action) {
       Storage.removeItem("usersAdminTask", action.payload);
@@ -43,25 +54,15 @@ const slice = createSlice({
       state.edit = action.payload
     },
     searchUsers(state, action) {
-      if (action.payload) {
-        const findedData = state.users.filter(el => el.email.toLowerCase().includes(action.payload) || el.phone.includes(action.payload));
+        const findedData = state.users.filter(el => el.email.toLowerCase().includes(action.payload.toLowerCase()) || el.phone.includes(action.payload));
         return {
           ...state,
           users: findedData,
           search: {
-            searching: true,
+            searchValue: action.payload,
             findedUsers: findedData
           }
         }
-      } else {
-        return {
-          ...state,
-          search: {
-            searching: false,
-            findedUsers: []
-          }
-        }
-      }
     },
     filterUsers(state, action) {
       state.filter = action.payload

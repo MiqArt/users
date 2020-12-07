@@ -98,8 +98,8 @@ const UserForm = () => {
       <div className="user-form__btn-group">
         {
           editing ?
-            [<button onClick={onHandleEdit} className="user-form__btn-group__btn --save">Save</button>,
-            <button onClick={cancelEditing} className="user-form__btn-group__btn --cancel">Cancel</button>]
+            [<button key="save-btn" onClick={onHandleEdit} className="user-form__btn-group__btn --save">Save</button>,
+            <button key="cancel-btn" onClick={cancelEditing} className="user-form__btn-group__btn --cancel">Cancel</button>]
             :
             <button onClick={onHandleSubmit} className="user-form__btn-group__btn --create">Create</button>
         }
