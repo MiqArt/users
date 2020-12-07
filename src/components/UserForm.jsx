@@ -87,7 +87,7 @@ const UserForm = () => {
         <FullNameIcon className="user-form__label__icon" />
         <input onChange={onHandleChange} value={data.fullName} placeholder="Full Name" className="user-form__input" type="text" name="fullName" />
       </label>
-      <label className="user-form__label" htmlFor="status">
+      <label className="user-form__label --triangle" htmlFor="status">
         <StatusIcon className="user-form__label__icon" />
         <select onChange={onHandleChange} value={data.status} className="user-form__select" name="status">
           <option value="client">Client</option>

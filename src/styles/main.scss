@@ -1,5 +1,4 @@
-$blue: #009ADA;
-$darkBlue:#111c27;
+@import "./variables.scss";
 
 @font-face {
 	font-family: "Galada-Regular";
@@ -24,11 +23,8 @@ $darkBlue:#111c27;
 
 input, select {
   border-radius: 0;
-  -webkit-border-radius: 0;
-}
-
-input[type="search"] {
   -webkit-appearance: none;
+  -webkit-border-radius: 0;
 }
 
 .App {
@@ -84,6 +80,26 @@ input[type="search"] {
 								-6px 7px #000000, -7px 6px #000000, -7px 8px #000000, -8px 7px #000000, 2px 2px 0px rgba(0,154,218,0);
   }
 }
+
+.--triangle::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-style: solid;
+  border-width: 7px 7px 0 7px;
+  right: 13px;
+  border-color: whitesmoke transparent transparent transparent;
+  // transition: transform .3s ease;
+  z-index: 100;
+}
+
+// .--triangle:focus-within:before {
+//   transform: rotate(180deg);
+// }
 
 @media (max-width: 768px) {
   .content {

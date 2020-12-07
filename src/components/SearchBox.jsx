@@ -23,12 +23,14 @@ const SearchBox = () => {
         <SearchIcon className="search__search-box__icon" />
         <input placeholder="Search" onChange={onHandleChange} className="search__search-box__input" type="text" name="" />
       </div>
-      <select onChange={onFilter} className="search__search-box__select" name="filter">
-        <option value="">All</option>
-        <option value="client">Client</option>
-        <option value="partner">Partner</option>
-        <option value="admin">Admin</option>
-      </select>
+      <div className="--triangle">
+        <select onChange={onFilter} className="search__search-box__select" name="filter">
+          <option value="">All</option>
+          <option value="client">Client</option>
+          <option value="partner">Partner</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
     </div>
   )
 }

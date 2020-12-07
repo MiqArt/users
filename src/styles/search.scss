@@ -1,4 +1,4 @@
-@import "./main.scss";
+@import "./variables.scss";
 
 .search {
   position: relative;
@@ -37,13 +37,15 @@
       background-color: whitesmoke
     }
     &__select {
+      position: relative;
+      padding: 0 33px 0 10px;
+      height: 100%;
       outline: none;
       border: none;
-      background-color: #111c27;
-      padding-left: 5px;
-      cursor: pointer;
       color: whitesmoke;
+      background-color: #111c27;
       border-left: 1px solid black;
+      cursor: pointer;
     }
   }
 }

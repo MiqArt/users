@@ -1,4 +1,4 @@
-@import "./main.scss";
+@import "./variables.scss";
 
 .user-form {
   display: flex;
@@ -41,7 +41,7 @@
   }
   &__select {
     width: 100%;
-    padding: 10px 5px;
+    padding: 10px;
     cursor: pointer;
     box-shadow:inset 0 0 5px 1px #000000;
     background-color: #111c27;
